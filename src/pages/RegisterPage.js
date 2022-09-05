@@ -23,7 +23,7 @@ export default function RegisterPage({ navigation }) {
   const [userNameValid, setUserNameValid] = React.useState(true);
 
   function validation(){
-    if (emailValid && phoneValid && passwordValid && userNameValid) {
+    if (emailValid && phoneValid && userNameValid) {
       register({email, phone, password, username : userName}).then((response) => {
         navigation.navigate('LoginPage');
       }).catch((error) => {
